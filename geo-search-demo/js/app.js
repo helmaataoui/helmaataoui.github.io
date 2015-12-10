@@ -57,7 +57,7 @@ $(document).ready(function() {
     switch (state) {
       case PAGE_STATES.BOUNDING_BOX_RECTANGLE:
       boundingBox = new google.maps.Rectangle({
-        bounds: { north: 45.707034, south: 45.385182, east: -73.478151, west: -73.8553 },
+        bounds: { north: 45.707034, south: 45.385182, east: -73.478151, west: -73.983622 },
         strokeColor: '#EF5362',
         strokeOpacity: 0.8,
         strokeWeight: 2,
@@ -184,7 +184,7 @@ $(document).ready(function() {
         position: {lat: hit._geoloc.lat, lng: hit._geoloc.lng},
         map: map,
         airport_id: hit.objectID,
-        title: hit.name + ' - ' + hit.city + ' - ' + hit.country
+        title: hit.listed_name + ' - ' + hit.address + ' - ' + hit.PostalCode
       });
       markers.push(marker);
       attachInfoWindow(marker, hit);
