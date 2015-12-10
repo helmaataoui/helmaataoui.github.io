@@ -275,7 +275,7 @@ $(document).ready(function() {
   }
 
   function attachInfoWindow(marker, hit) {
-    var message = (hit.name === hit.city) ? hit.name+' - '+hit.country : hit.name+' - '+hit.city+' - '+hit.country;
+    var message = (hit.listed_name === hit.city) ? hit.listed_name+' - '+hit.country : hit.listed_name+' - '+hit.city+' - '+hit.country;
     var infowindow = new google.maps.InfoWindow({ content: message });
     marker.addListener('click', function() {
       info_window = infowindow.open(marker.get('map'), marker);
