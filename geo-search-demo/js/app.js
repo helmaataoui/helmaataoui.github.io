@@ -114,11 +114,11 @@ $(document).ready(function() {
       break;
 
       case PAGE_STATES.AROUND_LONDON:
-      algoliaHelper.setQueryParameter('aroundLatLng', '51.50, -0.13');
+      algoliaHelper.setQueryParameter('aroundLatLng', '45.469237, -73.538554');
       break;
 
       case PAGE_STATES.AROUND_SYDNEY:
-      algoliaHelper.setQueryParameter('aroundLatLng', '-33.86, 151.20');
+      algoliaHelper.setQueryParameter('aroundLatLng', '45.523982, -73.582848');
       break;
     }
 
