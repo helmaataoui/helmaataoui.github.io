@@ -57,7 +57,7 @@ $(document).ready(function() {
     switch (state) {
       case PAGE_STATES.BOUNDING_BOX_RECTANGLE:
       boundingBox = new google.maps.Rectangle({
-        bounds: { north: 45.6529, south: 45.4144, east: -73.3637, west: -73.8553 },
+        bounds: { north: 45.707034, south: 45.385182, east: -73.478151, west: -73.983622 },
         strokeColor: '#EF5362',
         strokeOpacity: 0.8,
         strokeWeight: 2,
