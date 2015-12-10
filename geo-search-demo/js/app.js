@@ -31,10 +31,10 @@ $(document).ready(function() {
 
   // Page states
   var PAGE_STATES = {
-    LOAD                   : 0,
+    LOAD                   : 4,
     BOUNDING_BOX_RECTANGLE : 1,
     BOUNDING_BOX_POLYGON   : 2,
-    AROUND_IP              : 4,
+    AROUND_IP              : 0,
     AROUND_NYC             : 5,
     AROUND_LONDON          : 6,
     AROUND_SYDNEY          : 7
@@ -143,7 +143,7 @@ $(document).ready(function() {
   // ===============
   $searchInput.on('input propertychange', function(e) {
     var query = e.currentTarget.value;
-    if (pageState === PAGE_STATES.BOUNDING_BOX_RECTANGLE || pageState === PAGE_STATES.BOUNDING_BOX_POLYGON) fitMapToMarkersAutomatically = true;
+    if (pageState === PAGE_STATES.BOUNDING_BOX_RECTANGLE || pageState === PAGE_STATES.BOUNDING_BOX_POLYGON) fitMapToMarkersAutomatically = false;
     algoliaHelper.setQuery(query).search();
   });
 
@@ -169,7 +169,7 @@ $(document).ready(function() {
     for (var i = 0; i < content.hits.length; ++i) {
       var hit = content.hits[i];
       hit.displayCity = (hit.listed_name === hit.city);
-      if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.distance/1000) + " m";
+      if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance/1000) + " m";
     }
     $hits.html(hitsTemplate.render(content));
   }
