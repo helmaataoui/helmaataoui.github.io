@@ -183,7 +183,7 @@ $(document).ready(function() {
       var marker = new google.maps.Marker({
         position: {lat: hit._geoloc.lat, lng: hit._geoloc.lng},
         map: map,
-        airport_id: hit.objectID,
+        airport_id: hit.Completeness,
         title: hit.listed_name + ' - ' + hit.address + ' - ' + hit.PostalCode
       });
       markers.push(marker);
