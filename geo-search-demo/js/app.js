@@ -110,7 +110,7 @@ $(document).ready(function() {
       break;
 
       case PAGE_STATES.AROUND_NYC:
-      algoliaHelper.setQueryParameter('aroundLatLng', '40.71, -74.01');
+      algoliaHelper.setQueryParameter('aroundLatLng', '45.484144, -73.562743');
       break;
 
       case PAGE_STATES.AROUND_LONDON:
