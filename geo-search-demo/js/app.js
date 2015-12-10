@@ -143,7 +143,7 @@ $(document).ready(function() {
   // ===============
   $searchInput.on('input propertychange', function(e) {
     var query = e.currentTarget.value;
-    if (pageState === PAGE_STATES.BOUNDING_BOX_RECTANGLE || pageState === PAGE_STATES.BOUNDING_BOX_POLYGON) fitMapToMarkersAutomatically = false;
+    if (pageState === PAGE_STATES.BOUNDING_BOX_RECTANGLE || pageState === PAGE_STATES.BOUNDING_BOX_POLYGON) fitMapToMarkersAutomatically = true;
     algoliaHelper.setQuery(query).search();
   });
 
@@ -169,7 +169,7 @@ $(document).ready(function() {
     for (var i = 0; i < content.hits.length; ++i) {
       var hit = content.hits[i];
       hit.displayCity = (hit.listed_name === hit.city);
-      hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance) + " m";
+      if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance/1000) + " km";
     }
     $hits.html(hitsTemplate.render(content));
   }
