@@ -23,7 +23,7 @@ $(document).ready(function() {
   var noResultsTemplate = Hogan.compile($('#no-results-template').text());
 
   // Map initialization
-  var map = new google.maps.Map($map.get(0), { center: {lat: 44.5452, lng: -78.5389}, streetViewControl: true, mapTypeControl: false, zoom: 9, minZoom: 3, maxZoom: 12, styles: [{ stylers: [{ hue: "#3596D2" }] } ] });
+  var map = new google.maps.Map($map.get(0), { center: {lat: 45.5065, lng: -73.6531}, streetViewControl: true, mapTypeControl: false, zoom: 9, minZoom: 3, maxZoom: 12, styles: [{ stylers: [{ hue: "#3596D2" }] } ] });
   var fitMapToMarkersAutomatically = true;
   var markers = [];
   var boundingBox;
@@ -110,15 +110,15 @@ $(document).ready(function() {
       break;
 
       case PAGE_STATES.AROUND_NYC:
-      algoliaHelper.setQueryParameter('aroundLatLng', '45.484144, -73.562743');
+      algoliaHelper.setQueryParameter('aroundLatLng', '45.4841, -73.5627');
       break;
 
       case PAGE_STATES.AROUND_LONDON:
-      algoliaHelper.setQueryParameter('aroundLatLng', '45.469237, -73.538554');
+      algoliaHelper.setQueryParameter('aroundLatLng', '45.4692, -73.5385');
       break;
 
       case PAGE_STATES.AROUND_SYDNEY:
-      algoliaHelper.setQueryParameter('aroundLatLng', '45.523982, -73.582848');
+      algoliaHelper.setQueryParameter('aroundLatLng', '45.5239, -73.5828');
       break;
     }
 
