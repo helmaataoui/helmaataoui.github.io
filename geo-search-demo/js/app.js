@@ -168,7 +168,7 @@ $(document).ready(function() {
     content.hits = content.hits.slice(0,20);
     for (var i = 0; i < content.hits.length; ++i) {
       var hit = content.hits[i];
-      hit.displayCity = (hit.name === hit.city);
+      hit.displayCity = (hit.listed_name === hit.city);
       if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance/1000) + " km";
     }
     $hits.html(hitsTemplate.render(content));
