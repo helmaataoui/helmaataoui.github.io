@@ -4,9 +4,9 @@ $(document).ready(function() {
 
   // INITIALIZATION
   // ==============
-  var APPLICATION_ID = 'latency';
-  var SEARCH_ONLY_API_KEY = '6be0576ff61c053d5f9a3225e2a90f76';
-  var INDEX_NAME = 'airports';
+  var APPLICATION_ID = '5TEV4GO8XX';
+  var SEARCH_ONLY_API_KEY = '31ac168eb62342f4fa7e5c5bcacc12d4';
+  var INDEX_NAME = 'test';
   var PARAMS = { hitsPerPage: 60 };
 
   // Client + Helper initialization
@@ -320,4 +320,3 @@ $(document).ready(function() {
 
 
 });
-
