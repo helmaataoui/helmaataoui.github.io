@@ -23,7 +23,7 @@ $(document).ready(function() {
   var noResultsTemplate = Hogan.compile($('#no-results-template').text());
 
   // Map initialization
-  var map = new google.maps.Map($map.get(0), { streetViewControl: true, mapTypeControl: false, zoom: 4, minZoom: 3, maxZoom: 12, styles: [{ stylers: [{ hue: "#3596D2" }] } ] });
+  var map = new google.maps.Map($map.get(0), center: {lat: 45.506521, lng: -73.653123}, { streetViewControl: true, mapTypeControl: false, zoom: 4, minZoom: 3, maxZoom: 12, styles: [{ stylers: [{ hue: "#3596D2" }] } ] });
   var fitMapToMarkersAutomatically = true;
   var markers = [];
   var boundingBox;
