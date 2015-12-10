@@ -31,10 +31,10 @@ $(document).ready(function() {
 
   // Page states
   var PAGE_STATES = {
-    LOAD                   : 4,
+    LOAD                   : 0,
     BOUNDING_BOX_RECTANGLE : 1,
     BOUNDING_BOX_POLYGON   : 2,
-    AROUND_IP              : 0,
+    AROUND_IP              : 4,
     AROUND_NYC             : 5,
     AROUND_LONDON          : 6,
     AROUND_SYDNEY          : 7
@@ -169,7 +169,7 @@ $(document).ready(function() {
     for (var i = 0; i < content.hits.length; ++i) {
       var hit = content.hits[i];
       hit.displayCity = (hit.listed_name === hit.city);
-      if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance/1000) + " m";
+      hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance/1000) + " m";
     }
     $hits.html(hitsTemplate.render(content));
   }
