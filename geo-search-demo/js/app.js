@@ -57,7 +57,7 @@ $(document).ready(function() {
     switch (state) {
       case PAGE_STATES.BOUNDING_BOX_RECTANGLE:
       boundingBox = new google.maps.Rectangle({
-        bounds: { north: 45.707034, south: 45.385182, east: -73.478151, west: -73.983622 },
+        bounds: { north: 45.707034, south: 45.385182, east: -73.478151, west: -73.8553 },
         strokeColor: '#EF5362',
         strokeOpacity: 0.8,
         strokeWeight: 2,
@@ -75,18 +75,18 @@ $(document).ready(function() {
       case PAGE_STATES.BOUNDING_BOX_POLYGON:
       boundingBox = new google.maps.Polygon({
         paths: [
-          {lat: 45.5381286489, -73.6143636703},
-          {lat: 45.5309439967, -73.5986566544},
-          {lat: 45.5285990161, -73.6017036438},
-          {lat: 45.5279075288, -73.603720665},
-          {lat: 45.527877464, -73.6067247391},
-          {lat: 45.527095772, -73.608956337},
-          {lat: 45.5258330159, -73.610200882},
-          {lat: 45.5282683059, -73.615694046},
-          {lat: 45.5296211991, -73.6189985275},
-          {lat: 45.5300721563, -73.6222171783},
-          {lat: 45.5344913455, -73.6182689667},
-                ],
+        {lat: 45.5381286489,lng: -73.6143636703},
+        {lat: 45.5309439967,lng: -73.5986566544},
+        {lat: 45.5285990161,lng: -73.6017036438},
+        {lat: 45.5279075288,lng: -73.603720665},
+        {lat: 45.527877464,lng: -73.6067247391},
+        {lat: 45.527095772,lng: -73.608956337},
+        {lat: 45.5258330159,lng: -73.610200882},
+        {lat: 45.5282683059,lng: -73.615694046},
+        {lat: 45.5296211991,lng: -73.6189985275},
+        {lat: 45.5300721563,lng: -73.6222171783},
+        {lat: 45.5344913455,lng: -73.6182689667},
+        ],
         strokeColor: '#EF5362',
         strokeOpacity: 0.8,
         strokeWeight: 2,
