@@ -169,7 +169,7 @@ $(document).ready(function() {
     for (var i = 0; i < content.hits.length; ++i) {
       var hit = content.hits[i];
       hit.displayCity = (hit.listed_name === hit.city);
-      if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance/1000) + " km";
+      if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.distance/1000) + " m";
     }
     $hits.html(hitsTemplate.render(content));
   }
