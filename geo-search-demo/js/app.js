@@ -143,7 +143,7 @@ $(document).ready(function() {
   // ===============
   $searchInput.on('input propertychange', function(e) {
     var query = e.currentTarget.value;
-    if (pageState === PAGE_STATES.BOUNDING_BOX_RECTANGLE || pageState === PAGE_STATES.BOUNDING_BOX_POLYGON) fitMapToMarkersAutomatically = true;
+    if (pageState === PAGE_STATES.BOUNDING_BOX_RECTANGLE || pageState === PAGE_STATES.BOUNDING_BOX_POLYGON) fitMapToMarkersAutomatically = false;
     algoliaHelper.setQuery(query).search();
   });
 
