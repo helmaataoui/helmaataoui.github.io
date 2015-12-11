@@ -24,7 +24,7 @@
       Searching around a location can also rank the results by distance.<br>
       It can be done via the
       <a href="" class="change_page_state state_link" data-mode="around" data-state="ip">IP address</a>, or by providing the lat/lng of a point:
-      <a href="" class="change_page_state state_link active" data-mode="around" data-state="nyc">Nordelec office</a>,
+      <a href="" class="change_page_state state_link" data-mode="around" data-state="nyc">Nordelec office</a>,
       <a href="" class="change_page_state state_link" data-mode="around" data-state="london">Nuns island's office</a>,
       <a href="" class="change_page_state state_link" data-mode="around" data-state="sydney">St-Denis & Mont-Royal</a>...
     </p>
@@ -59,9 +59,9 @@
   <script type="text/template" id="hits-template">
     {{#hits}}
     <div class="hit">
-      <h3 class="hit-airport-code">{{{ _highlightResult.airport_id.value }}}</h3>
+      <h3 class="hit-airport-code">{{{ _highlightResult.Completeness.value }}}</h3>
       <h2 class="hit-name">{{{ _highlightResult.listed_name.value }}}{{^ displayCity }} - {{{ _highlightResult.address.value }}}{{/displayCity}}</h2>
-      <p class="hit-location">{{{ _highlightResult.country.value }}}<span class="hit-distance"> {{ distance }}</span></p>
+      <p class="hit-location"><span class="hit-distance"> {{ distance }}</span></p>
     </div>
     {{/hits}}
   </script>
