@@ -173,8 +173,6 @@ $(document).ready(function() {
     for (var i = 0; i < content.hits.length; ++i) {
       var hit = content.hits[i];
       hit.displayCity = (hit.listed_name === hit.city);
-      hit.Completeness = Number(hit.Completeness)/100 + "%";
-      hit.listed_name = hit.listed_name + " - " + hit.Completeness;
       if (hit._rankingInfo.matchedGeoLocation) {
         var ds = parseInt(hit._rankingInfo.matchedGeoLocation.distance);
         if (ds < 1000)
