@@ -172,7 +172,7 @@ $(document).ready(function() {
     content.hits = content.hits.slice(0,20);
     for (var i = 0; i < content.hits.length; ++i) {
       var hit = content.hits[i];
-      hit.displayCity = true;
+      hit.displayCity = (hit.listed_name === hit.city);
       if (hit._rankingInfo.matchedGeoLocation) {
         var ds = parseInt(hit._rankingInfo.matchedGeoLocation.distance);
         if (ds < 1000)
