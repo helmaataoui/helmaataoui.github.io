@@ -179,6 +179,7 @@ $(document).ready(function() {
           hit.distance = ds + " m";
         else
           hit.distance = ds/1000 + " km";
+        hit.Completeness = Number(hit.Completeness)/100 + "%";
       }
     }
     $hits.html(hitsTemplate.render(content));
