@@ -60,8 +60,7 @@
     {{#hits}}
     <div class="hit">
       <h3 class="hit-airport-code">{{{ _highlightResult.Completeness.value }}}</h3>
-      <h2 class="hit-name">{{{ _highlightResult.listed_name.value }}}{{^ displayCity }}</h2></br>
-      <h2 class="hit-name">{{{ _highlightResult.address.value }}}</h2>
+      <h2 class="hit-name">{{{ _highlightResult.listed_name.value }}}{{^ displayCity }}</h2>
       <p class="hit-location"><span class="hit-distance"> {{ distance }}</span></p>
     </div>
     {{/hits}}
