@@ -7,7 +7,7 @@ $(document).ready(function() {
   var APPLICATION_ID = '5TEV4GO8XX';
   var SEARCH_ONLY_API_KEY = '31ac168eb62342f4fa7e5c5bcacc12d4';
   var INDEX_NAME = 'test';
-  var PARAMS = { hitsPerPage: 10, getRankingInfo: 1 };
+  var PARAMS = { hitsPerPage: 10 };
 
   // Client + Helper initialization
   var algolia = algoliasearch(APPLICATION_ID, SEARCH_ONLY_API_KEY);
@@ -23,7 +23,7 @@ $(document).ready(function() {
   var noResultsTemplate = Hogan.compile($('#no-results-template').text());
 
   // Map initialization
-  var map = new google.maps.Map($map.get(0), { center: {lat: 45.5065, lng: -73.6531}, streetViewControl: true, mapTypeControl: false, zoom: 9, minZoom: 3, maxZoom: 20, styles: [{ stylers: [{ hue: "#3596D2" }] } ] });
+  var map = new google.maps.Map($map.get(0), { center: {lat: 45.5065, lng: -73.6531}, streetViewControl: true, mapTypeControl: false, zoom: 11, minZoom: 3, maxZoom: 20, styles: [{ stylers: [{ hue: "#3596D2" }] } ] });
   var fitMapToMarkersAutomatically = true;
   var markers = [];
   var boundingBox;
@@ -57,7 +57,7 @@ $(document).ready(function() {
     switch (state) {
       case PAGE_STATES.BOUNDING_BOX_RECTANGLE:
       boundingBox = new google.maps.Rectangle({
-        bounds: { north: 45.707034, south: 45.385182, east: -73.478151, west: -73.983622 },
+        bounds: { north: 45.531788, south: 45.454141, east: -73.545332, west: -73.627444 },
         strokeColor: '#EF5362',
         strokeOpacity: 0.8,
         strokeWeight: 2,
