@@ -184,8 +184,10 @@ $(document).ready(function() {
         position: {lat: Number(hit._geoloc.lat), lng: Number(hit._geoloc.lng)},
         map: map
       });
-      markers.push(marker);
-      attachInfoWindow(marker, hit);
+      if (hit._geoloc.lat != "") {
+        markers.push(marker);
+        attachInfoWindow(marker, hit);
+      }
     }
 
     if (fitMapToMarkersAutomatically) fitMapToMarkers();
