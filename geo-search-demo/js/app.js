@@ -7,7 +7,7 @@ $(document).ready(function() {
   var APPLICATION_ID = '5TEV4GO8XX';
   var SEARCH_ONLY_API_KEY = '31ac168eb62342f4fa7e5c5bcacc12d4';
   var INDEX_NAME = 'test';
-  var PARAMS = { hitsPerPage: 10 };
+  var PARAMS = { hitsPerPage: 60 };
 
   // Client + Helper initialization
   var algolia = algoliasearch(APPLICATION_ID, SEARCH_ONLY_API_KEY);
