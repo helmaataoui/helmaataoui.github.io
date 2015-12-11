@@ -104,22 +104,22 @@ $(document).ready(function() {
 
       case PAGE_STATES.AROUND_IP:
       algoliaHelper.setQueryParameter('aroundLatLngViaIP', true);
-      algoliaHelper.setQueryParameter('aroundRadius', 5000);
+      algoliaHelper.setQueryParameter('aroundRadius', 2000);
       break;
 
       case PAGE_STATES.AROUND_NYC:
       algoliaHelper.setQueryParameter('aroundLatLng', '45.4841, -73.5627');
-      algoliaHelper.setQueryParameter('aroundRadius', 5000);
+      algoliaHelper.setQueryParameter('aroundRadius', 2000);
       break;
 
       case PAGE_STATES.AROUND_LONDON:
       algoliaHelper.setQueryParameter('aroundLatLng', '45.4692, -73.5385');
-      algoliaHelper.setQueryParameter('aroundRadius', 5000);
+      algoliaHelper.setQueryParameter('aroundRadius', 2000);
       break;
 
       case PAGE_STATES.AROUND_SYDNEY:
       algoliaHelper.setQueryParameter('aroundLatLng', '45.5239, -73.5828');
-      algoliaHelper.setQueryParameter('aroundRadius', 5000);
+      algoliaHelper.setQueryParameter('aroundRadius', 2000);
       break;
     }
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
     for (var i = 0; i < content.hits.length; ++i) {
       var hit = content.hits[i];
       hit.displayCity = (hit.listed_name === hit.city);
-      if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance/1000) + " km";
+      if (hit._rankingInfo.matchedGeoLocation) hit.distance = parseInt(hit._rankingInfo.matchedGeoLocation.distance) + " m";
     }
     $hits.html(hitsTemplate.render(content));
   }
