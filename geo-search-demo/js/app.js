@@ -104,18 +104,22 @@ $(document).ready(function() {
 
       case PAGE_STATES.AROUND_IP:
       algoliaHelper.setQueryParameter('aroundLatLngViaIP', true);
+      algoliaHelper.setQueryParameter('aroundRadius', 5000);
       break;
 
       case PAGE_STATES.AROUND_NYC:
       algoliaHelper.setQueryParameter('aroundLatLng', '45.4841, -73.5627');
+      algoliaHelper.setQueryParameter('aroundRadius', 5000);
       break;
 
       case PAGE_STATES.AROUND_LONDON:
       algoliaHelper.setQueryParameter('aroundLatLng', '45.4692, -73.5385');
+      algoliaHelper.setQueryParameter('aroundRadius', 5000);
       break;
 
       case PAGE_STATES.AROUND_SYDNEY:
       algoliaHelper.setQueryParameter('aroundLatLng', '45.5239, -73.5828');
+      algoliaHelper.setQueryParameter('aroundRadius', 5000);
       break;
     }
 
