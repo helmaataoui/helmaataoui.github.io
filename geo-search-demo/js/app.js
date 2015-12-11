@@ -181,7 +181,7 @@ $(document).ready(function() {
     for (var i = 0; i<content.hits.length; ++i) {
       var hit = content.hits[i];
       var marker = new google.maps.Marker({
-        position: {lat: hit._geoloc.lat, lng: hit._geoloc.lng},
+        position: {lat: hit._geoloc.lat.replace("\"", ""), lng: hit._geoloc.lng.replace("\"", "")},
         map: map
       });
       markers.push(marker);
